@@ -4,11 +4,13 @@ import { NextRequest } from "next/server";
 export async function GET(req: NextRequest) {
   const searchParams = req.nextUrl.searchParams;
 
-  const category = searchParams.get("category") as string;
-  const search = searchParams.get("search") as string;
+  const category = (searchParams.get("category") as string)
+    .trim()
+    .toLowerCase();
+  const search = (searchParams.get("search") as string).trim().toLowerCase();
 
   try {
-    console.log("here");
+    console.log();
     const res = await getProductsService(category, search);
     if (!res.success) {
       return Response.json(

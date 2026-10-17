@@ -3,6 +3,7 @@
 import { supabase } from "../supabase";
 
 export const getProductsService = async (category: string, search: string) => {
+  console.log(category);
   let query = supabase
     .from("products")
     .select("*")

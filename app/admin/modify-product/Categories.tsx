@@ -1,6 +1,5 @@
 "use client";
 
-import { useRouter, useSearchParams } from "next/navigation";
 import { useParams } from "@/contexts/paramsContext";
 import { Categories } from "@/ui/categories";
 import "../admin.css";

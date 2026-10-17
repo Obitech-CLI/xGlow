@@ -17,13 +17,13 @@ header {
   width: 100%;
   top: 0;
   border: none;
-  background-color: black;
+  background-color: whitesmoke;
   z-index: 15;
 }
 
 header > button {
   background-color: transparent;
-  color: whitesmoke;
+  color: black;
   padding: 0;
   box-shadow: none;
 }
