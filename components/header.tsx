@@ -13,7 +13,7 @@ export function Header() {
       <span>xGlow</span>
       {!pathname.startsWith("/admin") && (
         <button type="button" onClick={() => setShowMenu(!showMenu)}>
-          {showMenu ? <X /> : <Menu />}
+          {showMenu ? <X size={30} /> : <Menu size={30} />}
         </button>
       )}
     </header>

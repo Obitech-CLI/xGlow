@@ -27,7 +27,11 @@ export const getProductsService = async (category: string, search: string) => {
   }
 
   if (data.length === 0) {
-    return { success: false, error: "no product found", status: 404 };
+    return {
+      success: false,
+      error: `no ${category ? category : ""} product found`,
+      status: 404,
+    };
   }
 
   return { success: true, products: data, status: 200 };

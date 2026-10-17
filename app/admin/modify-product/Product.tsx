@@ -126,7 +126,7 @@ export default function Product({ product }: Props) {
         </span>
       </label>
       <label>
-        <Image alt="" src={product.image} />
+        <Image alt="" src={product.image} width={100} height={100} />
         <span
           onClick={() => setEdit((prev) => ({ ...prev, image: !edit.image }))}
         >

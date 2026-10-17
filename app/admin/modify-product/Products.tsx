@@ -14,11 +14,13 @@ export default function Products() {
 
   const { category, search } = useParams();
 
+  console.log(category);
+
   const Products = UseFetch();
 
   const fetchProducts = async () => {
     const res = await Products.Fetch(
-      `/get-products?category=${category}&search=${search}`,
+      `/get-products?category=${category ? category : ""}&search=${search ? search : ""}`,
     );
     if (!res) return;
     if (res.success) {

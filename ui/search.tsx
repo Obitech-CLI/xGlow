@@ -6,7 +6,7 @@ import { useState } from "react";
 
 export default function Search() {
   const [input, setInput] = useState("");
-  const { setSearch } = useParams();
+  const { setSearch, search } = useParams();
   return (
     <fieldset>
       <label>

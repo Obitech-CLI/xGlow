@@ -13,3 +13,12 @@
   width: fit-content;
   height: 200px;
 }
+
+main.home {
+  padding: 3.6rem 0 3rem;
+}
+
+main.home > fieldset {
+  position: sticky;
+  top: 3.6rem;
+}

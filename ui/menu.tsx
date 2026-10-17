@@ -1,6 +1,5 @@
 "use client";
 
-import { useRouter, useSearchParams } from "next/navigation";
 import { useMenu } from "../contexts/menuContext";
 import { Categories } from "./categories";
 import { useParams } from "@/contexts/paramsContext";
@@ -19,6 +18,7 @@ export default function MenuModal() {
             className="All"
             onClick={() => {
               setCategory("");
+              setSearch("");
               setShowMenu(false);
             }}
           >

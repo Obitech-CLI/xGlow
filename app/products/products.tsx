@@ -1,10 +1,10 @@
 "use client";
 
+import { useParams } from "@/contexts/paramsContext";
 import { UseFetch } from "@/hooks/useFetch";
 import { ProductType } from "@/types/type";
 import { RotateCcw } from "lucide-react";
 import Image from "next/image";
-import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { ClipLoader } from "react-spinners";
 
@@ -16,8 +16,9 @@ export default function Products() {
   const Products = UseFetch();
 
   const fetchProducts = async () => {
+    setProducts([]);
     const res = await Products.Fetch(
-      `/get-products?category=${category}&search=${search}`,
+      `/get-products?category=${category ? category : ""}&search=${search ? search : ""}`,
     );
     if (!res) return;
     if (res.success) {
@@ -40,9 +41,15 @@ export default function Products() {
           {products.length > 0 ? (
             <div>
               {products.map((product) => (
-                <div>
+                <div key={product.id}>
                   <span>{product.category}</span>
-                  <Image alt="" src={product.image} />
+                  <Image
+                    alt=""
+                    src={product.image}
+                    width={300}
+                    height={200}
+                    loading="eager"
+                  />
                   <h3>{product.title}</h3>
                 </div>
               ))}
