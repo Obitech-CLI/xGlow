@@ -1,25 +1,10 @@
-import { Plus, Settings2 } from "lucide-react";
-import Link from "next/link";
-import { LogoutAdminButton } from "./Logout";
-import "../admin.css";
-import { Admin } from "@/lib/admin/admin";
+import { Suspense } from "react";
+import Dashboard from "./Dashboard";
 
-export default async function Page() {
-  const admin = await Admin();
+export default function Page() {
   return (
-    <main className="admin-dashboard">
-      <h2>admin dashboard</h2>
-      <LogoutAdminButton />
-      <nav>
-        <Link href="/admin/create-product">
-          <Plus />
-          create product
-        </Link>
-        <Link href="/admin/modify-product">
-          <Settings2 />
-          modify product
-        </Link>
-      </nav>
-    </main>
+    <Suspense>
+      <Dashboard />
+    </Suspense>
   );
 }
