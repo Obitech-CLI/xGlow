@@ -38,10 +38,10 @@ export const deleteProductService = async (id: string, category: string) => {
     };
   }
 
-  const path = decodeURIComponent(imgUrl.image.split("/product_images"))[1];
+  const path = decodeURIComponent(imgUrl.image.split("/products_images"))[1];
 
   const { error: storageError } = await supabase.storage
-    .from("product_images")
+    .from("products_images")
     .remove([path]);
 
   if (storageError) {

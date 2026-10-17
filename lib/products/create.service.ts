@@ -24,7 +24,7 @@ export const createProductsService = async (
   const imageName = `${Date.now()}-${image.name}`;
 
   const { error: storageError } = await supabase.storage
-    .from("product_images")
+    .from("products_images")
     .upload(`Products/${category}/${imageName}`, image, {
       contentType: image.type,
     });
@@ -38,7 +38,7 @@ export const createProductsService = async (
   }
 
   const { data: imageUrl } = supabase.storage
-    .from("product_images")
+    .from("products_images")
     .getPublicUrl(`Products/${category}/${imageName}`);
 
   const { error: insertError } = await supabase.from("products").insert({

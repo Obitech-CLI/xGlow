@@ -47,7 +47,7 @@ export const createProductsService = async (
     const path = decodeURIComponent(imgUrl.image.split("/product_images"))[1];
 
     const { error: deleteError } = await supabase.storage
-      .from("product_images")
+      .from("products_images")
       .remove([path]);
 
     if (deleteError) {
