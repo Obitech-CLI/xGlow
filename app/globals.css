@@ -1,49 +1,188 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html {
-  height: 100%;
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 * {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  font-weight: lighter;
+  font-family: sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+a:active {
+  opacity: 0.5;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+a:hover {
+  border: none;
+}
+
+.active {
+  border: none;
+  background-color: transparent;
+  color: #312b1e;
+}
+
+label.select > ul {
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.7);
+  list-style-type: none;
+  padding: 4.2rem 1rem 2rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+label.select > ul li {
+  border: 1.5px solid white;
+  padding: 1rem;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+}
+
+body {
+  background-color: #e2ceae;
+}
+
+main {
+  padding: 3.3rem 0 1.5rem;
+}
+
+h2,
+h3 {
+  color: #312b1e;
+  text-transform: capitalize;
+}
+
+h1 {
+  color: #fc5c02;
+  text-transform: uppercase;
+  text-shadow: 0.5px 0.5px 2px black;
+  text-align: center;
+  font-family: serif;
+}
+
+h2 {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+button {
+  background-color: #fc5c02;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  color: white;
+  gap: 0.5rem;
+  box-shadow: 0px 0px 4px black;
+}
+
+fieldset {
+  background-color: #312b1e;
+  border: none;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 0.5rem;
+}
+
+fieldset > label {
+  width: 100%;
+}
+
+fieldset > label input {
+  width: 100%;
+  background-color: transparent;
+  border: 1.5px solid white;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  color: white;
+}
+
+fieldset > button {
+  padding: 0;
+  background-color: transparent;
+  color: white;
+  box-shadow: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 1.5rem;
+  gap: 1rem;
+  position: relative;
+}
+
+form > label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.3rem;
+  text-transform: capitalize;
+}
+
+form > label > input {
+  border: none;
+  background-color: #312b1e;
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 20px;
+  color: white;
+}
+
+.retry,
+.loading {
+  width: 90%;
+  margin: 2rem auto;
+  padding: 3rem;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  gap: 0.5rem;
+  border: 1.5px solid white;
+  background-color: whitesmoke;
+  box-shadow: 0px 0px 3px black;
+}
+
+button:active {
+  opacity: 0.3;
+}
+
+form > button[type="submit"] {
+  margin-top: 1rem;
+  height: 50px;
+  width: 50%;
+  text-align: center;
+}
+
+form > label.select > button {
+  background-color: #312b1e;
+  padding: 0.8rem 1rem;
+  color: white;
+  font-size: 1rem;
+  justify-content: space-between;
+  border-radius: 20px;
+}
+
+textarea {
+  min-height: 100px;
+  field-sizing: content;
+  background-color: #312b1e;
+  border-radius: 20px;
+  font-size: 1rem;
+  padding: 0.5rem;
+  width: 100%;
 }

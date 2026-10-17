@@ -1,0 +1,100 @@
+.feedback-modal {
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(5px);
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feedback-modal > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: whitesmoke;
+  width: 90%;
+  padding: 2rem;
+  border-radius: 20px;
+}
+
+.feedback-modal > div p {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.menu {
+  background-color: #7c6b51;
+  position: fixed;
+  top: 0;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  width: 250px;
+}
+
+.menu > button {
+  padding: 2rem 1rem;
+  color: white;
+  background-color: transparent;
+  text-shadow: 1px 1px 3px black;
+}
+
+.All {
+  background-image: url("../public/All.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.Bellywaist {
+  background-image: url("../public/Belle&waist.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.Faceskin {
+  background-image: url("../public/Face&skin.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.Thighslegs {
+  background-image: url("../public/Legs&thighs.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.Underarmselbows {
+  background-image: url("../public/Underarms&elbow.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.Hairsscalp {
+  background-image: url("../public/Hair&scalp.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.Breastbuttocks {
+  background-image: url("../public/Breast&buttocks.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.VaginaAnus {
+  background-image: url("../public/Vagina&anus.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
