@@ -7,7 +7,7 @@ import { RotateCcw, Tag } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { ClipLoader } from "react-spinners";
-import "./products.css";
+import "./products/products.css";
 import { useRouter, useSearchParams } from "next/navigation";
 
 export default function Products() {
