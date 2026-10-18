@@ -1,7 +1,7 @@
 "use client";
 
 import { ProductType } from "@/types/type";
-import { RotateCcw, ShoppingCart, Tag, TagIcon } from "lucide-react";
+import { RotateCcw, ShoppingCart, TagIcon } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import "./products.css";
