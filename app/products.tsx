@@ -60,7 +60,7 @@ export default function Products() {
         <>
           {products.length > 0 ? (
             <>
-              <h2>{category ? category : "all products"}</h2>
+              <h3>{category ? category : "all products"}</h3>
               <div className="products">
                 {products.map((product) => (
                   <div key={product.id}>

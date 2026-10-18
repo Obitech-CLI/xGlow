@@ -39,7 +39,7 @@
   gap: 0.5rem;
 }
 
-.my-products > h2 {
+.my-products > h3 {
   background-color: whitesmoke;
   padding: 0.7rem 2rem;
   width: fit-content;
@@ -72,6 +72,7 @@
 
 .product > h2 {
   margin: 0;
+  padding: 0 0.5rem;
 }
 
 .product {
@@ -123,6 +124,7 @@
 
 .product > div {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 1.5rem;
   justify-content: center;
@@ -132,11 +134,11 @@
 .product > div > div {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
-.product > ul h3 {
-  color: white;
+.product > h3 {
+  text-align: center;
 }
 
 .product > ul {
@@ -157,6 +159,7 @@
   box-shadow: 0px 0px 2px black;
   border-radius: 10px;
   text-transform: capitalize;
+  color: #fc5c02;
 }
 
 .product > ul li {

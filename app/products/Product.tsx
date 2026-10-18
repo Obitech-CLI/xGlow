@@ -43,8 +43,8 @@ export default function Product({ product, error }: Props) {
               buy product
             </button>
           </div>
+          <h3>purchase package</h3>
           <ul>
-            <h3>purchase package</h3>
             <span>what you will get</span>
             {product.package.split(".").map((p, i) => (
               <li key={i}>{p}</li>
