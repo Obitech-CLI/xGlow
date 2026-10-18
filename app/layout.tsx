@@ -23,7 +23,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
                 <ParamsProvider>
                   <Header />
                   {children}
-                  <TawkChat />
                   <SuccessModal />
                   <ErrorModal />
                   <ConfirmModal />
