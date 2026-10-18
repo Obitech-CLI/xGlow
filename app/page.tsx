@@ -5,12 +5,15 @@ import Hero from "@/public/Perfect-Woman.png";
 import Hero0 from "@/public/PerfectWoman0.png";
 import Search from "@/ui/search";
 import Products from "./products";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
     <main className={styles.home}>
-      <MenuModal />
-      <Search />
+      <Suspense>
+        <MenuModal />
+        <Search />
+      </Suspense>
       <div className={styles.hero}>
         <h1>
           the<br></br>perfect<br></br>woman
@@ -18,7 +21,9 @@ export default function Home() {
         <Image src={Hero} alt="" loading="eager" />
         <Image src={Hero0} alt="" loading="eager" />
       </div>
-      <Products />
+      <Suspense>
+        <Products />
+      </Suspense>
     </main>
   );
 }
