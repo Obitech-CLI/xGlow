@@ -1,6 +1,5 @@
 import { getProduct } from "@/lib/product";
 import Product from "./Product";
-import { Suspense } from "react";
 
 export default async function Page({
   searchParams,
@@ -15,9 +14,7 @@ export default async function Page({
   const res = await getProduct(id, category, title);
   return (
     <main>
-      <Suspense fallback={<p>loading...</p>}>
-        <Product product={res?.product} error={res.error} />
-      </Suspense>
+      <Product product={res?.product} error={res.error} />
     </main>
   );
 }
