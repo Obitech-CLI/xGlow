@@ -49,6 +49,9 @@ body {
 
 main {
   padding: 4.3rem 0 3rem;
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
 }
 
 h2,

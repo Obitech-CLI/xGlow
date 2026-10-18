@@ -8,3 +8,7 @@ form.auth > label {
 form.auth > label > input {
   width: 100%;
 }
+
+form.auth {
+  margin-block: auto;
+}
