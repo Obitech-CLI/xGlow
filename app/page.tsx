@@ -4,7 +4,7 @@ import MenuModal from "@/ui/menu";
 import Hero from "@/public/Perfect-Woman.png";
 import Hero0 from "@/public/PerfectWoman0.png";
 import Search from "@/ui/search";
-import Products from "./products/products";
+import Products from "./products";
 
 export default function Home() {
   return (
