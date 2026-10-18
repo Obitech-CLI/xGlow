@@ -8,6 +8,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { ClipLoader } from "react-spinners";
 import "./products.css";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export default function Products() {
   const [products, setProducts] = useState<ProductType[]>([]);
@@ -30,6 +31,24 @@ export default function Products() {
   useEffect(() => {
     fetchProducts();
   }, [category, search]);
+
+  const searchParams = useSearchParams();
+  const router = useRouter();
+
+  const handleSelectedProduct = (
+    id: string,
+    category: string,
+    title: string,
+  ) => {
+    const params = new URLSearchParams(searchParams.toString());
+    if (id || title || category) {
+      params.set("id", id);
+      params.set("category", category);
+      params.set("title", title);
+    }
+    router.push(`/products/?${params}`);
+    router.refresh();
+  };
   return (
     <div className="my-products">
       {Products.loading ? (
@@ -48,7 +67,7 @@ export default function Products() {
                     <Image
                       alt=""
                       src={product.image}
-                      width={300}
+                      width={200}
                       height={200}
                       loading="eager"
                     />
@@ -58,7 +77,16 @@ export default function Products() {
                         <span className="discount">${product.discount}.00</span>
                         <span className="price">${product.price}.00</span>
                       </div>
-                      <button type="button">
+                      <button
+                        type="button"
+                        onClick={() =>
+                          handleSelectedProduct(
+                            String(product.id),
+                            product.category,
+                            product.title,
+                          )
+                        }
+                      >
                         <Tag />
                         view product
                       </button>
